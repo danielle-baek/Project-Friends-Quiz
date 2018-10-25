@@ -37,7 +37,7 @@ router.get('/:id', (req, res) => {
   let ques = data.Questions[id - 1]
   console.log('questions route hit')
   console.log(ques)
-  res.render('./views/questions')
+  res.render('./questions.hbs', ques)
 })
 
 module.exports = router
