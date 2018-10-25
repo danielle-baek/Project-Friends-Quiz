@@ -20,12 +20,12 @@ let scores = {
 function scoreCharacters (addPoints, character) {
   // loop that goes through scores object to review which key/character has been passed
   
-  let scoresArr = Object.keys(scores)
-  let found = scoresArr.find((person) => {
-    return person.scores === character
-    });
-  console.log (found)
-  return found
+  // let scoresArr = Object.keys(scores)
+  // let found = scoresArr.find((person) => {
+  //   return person.scores === character
+  //   });
+  // console.log (found)
+  // return found
     
 
 
