@@ -1,13 +1,20 @@
 {"Questions": [
   {"Question": "You see a pair of shoes you want, what do you do?",
-    "A1": ["Buy them on dad's credit card", "Rachel"],
-    "A2": ["Check they are cruely-free", "Phoebe"],
-    "A3": ["The shoes I'm wearing are fine", "Joey"],
-    "A4": ["How easy are they going to be to keep clean?", "Monica"],
-    "A5": ["Check with my friends before buying", "Chandler"],
-    "A6": ["Research them to make sure they're made well", "Ross"]
+    "A1": "Buy them on dad's credit card",
+    "C1": "Rachel",
+    "A2": "Check they are cruely-free", 
+    "C2": "Phoebe",
+    "A3": "The shoes I'm wearing are fine",
+    "C3": "Joey",
+    "A4": "How easy are they going to be to keep clean?", "Monica"
+    "C4": "Rachel",
+    "A5": "Check with my friends before buying", "Chandler"
+    "C5": "Rachel",
+    "A6": "Research them to make sure they're made well", "Ross"]
+    "C6": "Rachel",
   },
   {"Question": "It's lunchtime!",
+    
     "A1": ["YUS! How many courses are there?", "Joey"],
     "A2": ["I'll have the vegetarian option", "Phoebe"],
     "A3": ["Everyone's gonna love the dishes I made today", "Monica"],
