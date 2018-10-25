@@ -17,20 +17,20 @@ router.get('/results', (req, res) => {
   res.send('This is results')
 })
 
-router.get('/test', (req, res) => {
-  console.log('testing')
-  res.render('./questions.hbs')
-})
+// router.get('/test', (req, res) => {
+//   console.log('testing')
+//   res.render('./questions.hbs')
+// })
 
 // router.get('/test', (req, res) => {
 //   console.log('testing')
 //   res.render('./index.hbs')
 // })
 
-// router.get('/test', (req, res) => {
-//   console.log('testing')
-//   res.render('./result.hbs')
-// })
+router.get('/test', (req, res) => {
+  console.log('testing')
+  res.render('./result.hbs')
+})
 
 router.get('/:id', (req, res) => {
   let id = req.params.id
