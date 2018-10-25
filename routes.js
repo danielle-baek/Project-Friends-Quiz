@@ -1,3 +1,4 @@
+const data = require('./questions.json')
 const express = require('express')
 const router = express.Router()
 
@@ -33,9 +34,10 @@ router.get('/test', (req, res) => {
 
 router.get('/:id', (req, res) => {
   let id = req.params.id
+  let ques = data.Questions[id - 1]
   console.log('questions route hit')
-  console.log(id)
-  res.send('This is a question page')
+  console.log(ques)
+  res.render('./views/questions')
 })
 
 module.exports = router
