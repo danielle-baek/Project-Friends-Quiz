@@ -26,10 +26,10 @@ router.get('/test', (req, res) => {
 //   res.render('./index.hbs')
 // })
 
-router.get('/test', (req, res) => {
-  console.log('testing')
-  res.render('./result.hbs')
-})
+// router.get('/test', (req, res) => {
+//   console.log('testing')
+//   res.render('./result.hbs')
+// })
 
 router.get('/:id', (req, res) => {
   let id = req.params.id
@@ -39,12 +39,3 @@ router.get('/:id', (req, res) => {
 })
 
 module.exports = router
-
-
-
-
-
-
-
-
-
