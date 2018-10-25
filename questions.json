@@ -6,12 +6,12 @@
     "C2": "Phoebe",
     "A3": "The shoes I'm wearing are fine",
     "C3": "Joey",
-    "A4": "How easy are they going to be to keep clean?", "Monica"
+    "A4": "How easy are they going to be to keep clean?", 
     "C4": "Rachel",
-    "A5": "Check with my friends before buying", "Chandler"
+    "A5": "Check with my friends before buying", 
     "C5": "Rachel",
-    "A6": "Research them to make sure they're made well", "Ross"]
-    "C6": "Rachel",
+    "A6": "Research them to make sure they're made well", 
+    "C6": "Rachel"
   },
   {"Question": "It's lunchtime!",
     
@@ -41,9 +41,9 @@
   {"Question": "If the downstairs neighbour is being loud, I will:",
     "A1": ["Stomp loudly", "Rachel"],
     "A2": ["I'm a pro sleeper, I'll sleep though it", "Joey"],
-    "A3": ["Not od anything and hope it stops", "Chandler"],
+    "A3": ["Not do anything and hope it stops", "Chandler"],
     "A4": ["Go down there and say something", "Ross"],
-    "A5": ["Be louderthan my neighbour", "Phoebe"],
+    "A5": ["Be louder than my neighbour", "Phoebe"],
     "A6": ["Complain loudly to my friends", "Monica"]
   },
   {"Question": "If I see someone I recognise, but don't know well, I:",
