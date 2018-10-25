@@ -1,4 +1,16 @@
 body{
-  text-align: center
+  text-align: center;
+  background-color: rgba(27, 27, 218, 0.746)
+
 }
 
+h3{
+  font-family: 'Rock Salt', cursive;
+  color: black
+}
+
+button{
+  background-color: rgba(255, 255, 0, 0.829);
+  color: black;
+  width: 42%
+}
