@@ -19,7 +19,8 @@ const router = express.Router()
 //   return answers
 // }
 
-router.get('/q')
+let character = 4
+module.exports = character
 
 
 // getQuestion(1)
