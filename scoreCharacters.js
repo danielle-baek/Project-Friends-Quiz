@@ -1,7 +1,7 @@
-
 module.exports = {
   scoreCharacters,
-  init
+  init,
+  highestScore
 }
 
 // let scoreChandler = 0
@@ -15,7 +15,7 @@ let scores = {
   'Chandler': 0,
   'Joey': 0,
   'Ross': 0,
-  'Pheobe': 0,
+  'Phoebe': 0,
   'Rachel': 0,
   'Monica': 0
 }
@@ -25,24 +25,36 @@ function init () {
     'Chandler': 0,
     'Joey': 0,
     'Ross': 0,
-    'Pheobe': 0,
+    'Phoebe': 0,
     'Rachel': 0,
     'Monica': 0
   }
   console.log(scores)
 }
 function scoreCharacters (addPoints, character) {
-  scores[character]++
+  scores[character] += addPoints
   console.log(scores)
+}
 
-  // loop that goes through scores object to review which key/character has been passed
+function highestScore () {
+  let highest = 'Chandler'
+  for (let key in scores) {
+    if (scores[key] > scores[highest]) {
+      highest = key
+    }
+  }
+  console.log(highest)
+  return highest
+}
 
-  // let scoresArr = Object.keys(scores)
-  // let found = scoresArr.find((person) => {
-  //   return person.scores === character
-  //   });
-  // console.log (found)
-  // return found
+// loop that goes through scores object to review which key/character has been passed
+
+// let scoresArr = Object.keys(scores)
+// let found = scoresArr.find((person) => {
+//   return person.scores === character
+//   });
+// console.log (found)
+// return found
 
 //   console.log(addPoints)
 //   console.log(character)
@@ -54,23 +66,20 @@ function scoreCharacters (addPoints, character) {
 //     console.log('found match: ' + character[x])
 //     scores.splice(x, 1, addPoints)
 //     return character, scores
-    
+
 //   }
 //   console.log(scores)
 
 // }
-  
-  // if statement that will compare the character given vs the key from the loop
-    // once the name matches, grab the value of that key, 
-      // add the new  score
-      // update the object with the score
 
+// if statement that will compare the character given vs the key from the loop
+// once the name matches, grab the value of that key,
+// add the new  score
+// update the object with the score
 
-
-  // if statement that will compare the character given vs the key from the loop
-  // once the name matches, grab the value of that key,
-  // add the new  score
-  // update the object with the score
-}
+// if statement that will compare the character given vs the key from the loop
+// once the name matches, grab the value of that key,
+// add the new  score
+// update the object with the score
 
 // scoreCharacters(5, 'Joey')

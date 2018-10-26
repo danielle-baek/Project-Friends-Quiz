@@ -1,6 +1,6 @@
 const data = require('./questions.json')
 const express = require('express')
-// const score = require('./scoreCharacters')
+const score = require('./scoreCharacters')
 
 
 const router = express.Router()
@@ -11,13 +11,13 @@ router.get('/', (req, res) => {
   res.redirect('/friends/home')
 })
 
-router.post('/11', (req, res) => {
-  console.log('redirecting to results')
-  res.redirect('/friends/results')
-})
+// router.post('/11', (req, res) => {
+//   console.log('redirecting to results1')
+//   res.redirect('/friends/results')
+// })
 
 router.get('/11', (req, res) => {
-  console.log('redirecting to results')
+  console.log('redirecting to results2')
   res.redirect('/friends/results')
 })
 
@@ -28,6 +28,7 @@ router.get('/home', (req, res) => {
 
 router.get('/results', (req, res) => {
   console.log('hit results')
+  let matchingChar = score.highestScore()
   res.render('./result.hbs')
 })
 
@@ -53,10 +54,10 @@ router.post('/submit/:id', (req, res) => {
   res.redirect('/friends/:id')
 })
 
-router.get('/11', (req, res) => {
-  console.log('redirecting to results')
-  res.redirect('/friends/results')
-})
+// router.get('/11', (req, res) => {
+//   console.log('redirecting to results3')
+//   res.redirect('/friends/results')
+// })
 
 
 module.exports = router
