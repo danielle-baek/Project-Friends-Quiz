@@ -44,7 +44,26 @@ function scoreCharacters (addPoints, character) {
   // console.log (found)
   // return found
 
+//   console.log(addPoints)
+//   console.log(character)
+//   console.log(scores.length)
 
+// for (let x = 0; x < scores.length; x++) {
+//   console.log(x)
+//   if (character == characters[x]) {
+//     console.log('found match: ' + character[x])
+//     scores.splice(x, 1, addPoints)
+//     return character, scores
+    
+//   }
+//   console.log(scores)
+
+// }
+  
+  // if statement that will compare the character given vs the key from the loop
+    // once the name matches, grab the value of that key, 
+      // add the new  score
+      // update the object with the score
 
 
 
@@ -53,5 +72,5 @@ function scoreCharacters (addPoints, character) {
   // add the new  score
   // update the object with the score
 }
-let character = 'Joey'
-scoreCharacters(1, character)
+
+// scoreCharacters(5, 'Joey')

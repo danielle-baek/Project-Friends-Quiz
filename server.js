@@ -18,8 +18,9 @@ server.use('/friends', question)
 
 // routes
 server.get('/', (req, res) => {
-  console.log('Home route has been hit')
-  res.send('this is home, go to <a href="http://localhost:3000/friends"> click here for Friends route<a>')
+  console.log('Home route has been hit [server.js]')
+  res.redirect('/friends/home')
 })
+
 
 module.exports = server
