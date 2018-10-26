@@ -1,0 +1,20 @@
+body{
+  text-align: center;
+  background-color: rgba(27, 27, 218, 0.746)
+}
+
+h3{
+  font-family: 'Rock Salt', cursive;
+  color: black
+}
+
+h2{
+  font-family: 'Rock Salt', cursive;
+  color: rgba(255, 0, 0, 0.87)
+}
+
+button{
+  background-color: rgb(223, 223, 31);
+  color: black;
+  width: 42%
+}
