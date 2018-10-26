@@ -1,12 +1,14 @@
 <h3>The Friends Quiz Continued...</h3>
 <h2></h2>
-
+<form class='form' method='post' action='/friends/{{id}}' >
 <h1>{{Question}}</h1>
 <ol>
-  <li><button onclick="proceed({{id, 1}})" id="1">{{A1}}</button></li><br> 
-  <li><button onclick="proceed({{id, 2}})" id="2">{{A2}}</button></li><br>
-  <li><button onclick="proceed({{id, 3}})" id="3">{{A3}}</button></li><br>
-  <li><button onclick="proceed({{id, 4}})" id="4">{{A4}}</button></li><br>
-  <li><button onclick="proceed({{id, 5}})" id="5">{{A5}}</button></li><br>
-  <li><button onclick="proceed({{id, 6}})" id="6">{{A6}}</button></li>
+  <li><input type="submit" name="A1" value="{{A1}}"></li>
+  <li><button id="1">{{A1}}</button></li><br> 
+  <li><button id="2">{{A2}}</button></li><br>
+  <li><button id="3">{{A3}}</button></li><br>
+  <li><button id="4">{{A4}}</button></li><br>
+  <li><button id="5">{{A5}}</button></li><br>
+  <li><button id="6">{{A6}}</button></li>
 </ol>
+</form>

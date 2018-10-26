@@ -1,5 +1,7 @@
 const data = require('./questions.json')
+const character = require ('./public/script.js')
 const express = require('express')
+
 const router = express.Router()
 
 router.get('/', (req, res) => {
@@ -38,7 +40,8 @@ router.get('/:id', (req, res) => {
 router.post('/:id', (req, res) => {
   let id = req.params.id
   let ques = data.Questions[id - 1]
-  let x = req.body.id
+  let x = req.body.A1
+  console.log(x)
   res.render('./questions.hbs', ques)
 })
 
