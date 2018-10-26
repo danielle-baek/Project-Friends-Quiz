@@ -7,24 +7,37 @@ router.get('/', (req, res) => {
   res.redirect('/friends/home')
 })
 
-router.get('/friends/11', (req, res) => {
+router.post('/11', (req, res) => {
   console.log('redirecting to results')
-  res.redirect('/results')
+  res.redirect('/friends/results')
+})
+
+router.get('/11', (req, res) => {
+  console.log('redirecting to results')
+  res.redirect('/friends/results')
 })
 
 router.get('/home', (req, res) => {
-  console.log('home route hit')
-  res.send('This is home')
+  console.log('home route hit [routes.js]')
+  res.render('./index.hbs')
 })
 
 router.get('/results', (req, res) => {
-  console.log('results route hit')
-  res.send('This is results')
+  console.log('hit results')
+  res.render('./result.hbs')
 })
 
-router.get('/test', (req, res) => {
-  console.log('testing')
-  res.render('./result.hbs')
+router.post('/start', (req, res) => {
+  console.log('redirecting to results')
+  res.redirect('/friends/start')
+})
+
+router.get('/start', (req, res) => {
+  let id = req.params.id
+  let ques = data.Questions[0]
+  console.log('questions route hit')
+  console.log(ques)
+  res.render('./questions.hbs', ques)
 })
 
 router.get('/:id', (req, res) => {
