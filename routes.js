@@ -1,6 +1,7 @@
 const data = require('./questions.json')
-const character = require ('./public/script.js')
 const express = require('express')
+// const score = require('./scoreCharacters')
+
 
 const router = express.Router()
 
@@ -29,20 +30,8 @@ router.get('/test', (req, res) => {
   res.render('./result.hbs')
 })
 
-router.get('/:id', (req, res) => {
-  let id = req.params.id
-  let ques = data.Questions[id - 1]
-  console.log('questions route hit')
-  console.log(ques)
-  res.render('./questions.hbs', ques)
-})
 
-router.post('/:id', (req, res) => {
-  let id = req.params.id
-  let ques = data.Questions[id - 1]
-  let x = req.body.A1
-  console.log(x)
-  res.render('./questions.hbs', ques)
-})
+
+
 
 module.exports = router
