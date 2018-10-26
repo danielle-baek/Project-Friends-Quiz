@@ -1,6 +1,7 @@
 const data = require('./questions.json')
 const express = require('express')
 const router = express.Router()
+const scoreCharacters = require('./scoreCharacters')
 
 router.get('/', (req, res) => {
   console.log('/friends/ route hit')
@@ -54,5 +55,16 @@ router.post('/:id', (req, res) => {
   let x = req.body.id
   res.render('./questions.hbs', ques)
 })
+
+router.post('/submit/:id', (req, res) => {
+  console.log('redirecting to results')
+  res.redirect('/friends/:id')
+})
+
+router.get('/11', (req, res) => {
+  console.log('redirecting to results')
+  res.redirect('/friends/results')
+})
+
 
 module.exports = router
