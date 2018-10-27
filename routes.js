@@ -18,7 +18,7 @@ router.get('/', (req, res) => {
 // })
 
 router.get('/11', (req, res) => {
-  console.log('redirecting to results2')
+  console.log('redirecting to results')
   res.redirect('/friends/results')
 })
 
@@ -30,7 +30,13 @@ router.get('/home', (req, res) => {
 router.get('/results', (req, res) => {
   console.log('hit results')
   let matchingChar = score.highestScore()
-  let character = characterData[matchingChar]
+  let character = characterData[matchingChar[0]]
+  if (matchingChar.length > 1) {
+    for (let i = 1; i < matchingChar.length; i++) {
+      character.name += ' & ' + matchingChar[i]
+      console.log('also!!')
+    }
+  }
   res.render('./result.hbs', character)
 })
 

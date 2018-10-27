@@ -37,10 +37,14 @@ function scoreCharacters (addPoints, character) {
 }
 
 function highestScore () {
-  let highest = 'Chandler'
+  let highest = ['Chandler']
   for (let key in scores) {
-    if (scores[key] > scores[highest]) {
-      highest = key
+    if (key !== 'Chandler') {
+      if (scores[key] > scores[highest]) {
+        highest = [key]
+      } else if (scores[key] === scores[highest]) {
+        highest.push(key)
+      }
     }
   }
   console.log(highest)
