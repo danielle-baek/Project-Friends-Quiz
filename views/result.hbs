@@ -1,7 +1,10 @@
 <h2>You are most like...</h2>
-
-<h1>{{name}}</h1>
+{{#each character}}
+<li>
+  <h1>{{name}}</h1>
 
 <img src="{{images}}" alt"Ross">
 
 <h4>{{Bios}}</h4>
+</li>
+{{/each}}

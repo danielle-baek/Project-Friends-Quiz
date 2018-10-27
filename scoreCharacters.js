@@ -40,9 +40,9 @@ function highestScore () {
   let highest = ['Chandler']
   for (let key in scores) {
     if (key !== 'Chandler') {
-      if (scores[key] > scores[highest]) {
+      if (scores[key] > scores[highest[0]]) {
         highest = [key]
-      } else if (scores[key] === scores[highest]) {
+      } else if (scores[key] === scores[highest[0]]) {
         highest.push(key)
       }
     }
