@@ -1,4 +1,5 @@
 const data = require('./questions.json')
+const characterData = require('./characters.json')
 const express = require('express')
 const score = require('./scoreCharacters')
 
@@ -29,7 +30,8 @@ router.get('/home', (req, res) => {
 router.get('/results', (req, res) => {
   console.log('hit results')
   let matchingChar = score.highestScore()
-  res.render('./result.hbs')
+  let character = characterData[matchingChar]
+  res.render('./result.hbs', character)
 })
 
 router.post('/start', (req, res) => {
@@ -38,8 +40,10 @@ router.post('/start', (req, res) => {
 })
 
 router.get('/start', (req, res) => {
-  let id = req.params.id
+  //let id = req.params.id
   let ques = data.Questions[0]
+  score.init()
+  console.log('reset scores')
   console.log('questions route hit')
   console.log(ques)
   res.render('./questions.hbs', ques)
