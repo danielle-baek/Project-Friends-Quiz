@@ -48,8 +48,8 @@ router.get('/1', (req, res) => {
 router.post('/:id', (req, res) => {
   console.log('POST route+ID hit')
   let id = req.params.id
-  let answer = req.body.value
-  console.log('answer clicked ' + answer + ' ID of the Q is ' + id)
+  let answer = req.params
+  console.log('answer clicked ' + JSON.stringify(answer) + ' ID of the Q is ' + id)
   let nextQues = data.Questions[id]
   res.render('./questionsTest.hbs', nextQues)
 })
